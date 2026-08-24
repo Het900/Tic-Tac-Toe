@@ -6,6 +6,9 @@ body{
     background-color: #B2F7EC;
     text-align: center;
 }
+.hide {
+    display: none;
+}
 .container{
     height: 70vh;
     display: flex;
