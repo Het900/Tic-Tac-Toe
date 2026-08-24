@@ -41,6 +41,10 @@ boxes.forEach((box)=>{
 const gameDraw=()=>{
     msg.innerText="Game was Draw";
     msgcont.classList.remove("hide");
+    setTimeout(() => {
+        alert(`Game was Draw`);
+        resetgame();
+    }, 100);
 };
 const disableBoxes=()=>{
     for(let box of boxes){
