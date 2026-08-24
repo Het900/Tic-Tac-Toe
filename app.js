@@ -15,10 +15,11 @@ const resetgame=()=>{
     turn=true;
     cnt=0;
     enableBoxes();
-    msgcont.classList.add("hide");
+    msgcont.classList.remove("hide");
 };
 const newgame=()=>{
     resetgame();
+    msgcont.classList.add("hide");
     msg.innerText=defaultmsg;
 };
 boxes.forEach((box)=>{
