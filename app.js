@@ -20,7 +20,7 @@ const resetgame=()=>{
 const newgame=()=>{
     resetgame();
     msg.innerText=defaultmsg;
-}
+};
 boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
         console.log("box clicked");
@@ -46,11 +46,7 @@ const gameDraw=()=>{
         resetgame();
     }, 100);
 };
-const disableBoxes=()=>{
-    for(let box of boxes){
-        box.disabled=true;
-    }
-};
+
 const enableBoxes=()=>{
     for(let box of boxes)
     {
@@ -69,7 +65,7 @@ const showwinner=(winner)=>{
 };
 
 const checkwin=()=>{
-    for (pat of winPat){
+    for (let pat of winPat){
         let pos1=boxes[pat[0]].innerText;
         let pos2=boxes[pat[1]].innerText;
         let pos3=boxes[pat[2]].innerText;
@@ -82,6 +78,7 @@ const checkwin=()=>{
             }
         }
     }
+    return false;
 };
 newbtn.addEventListener("click",newgame);
 resetbtn.addEventListener("click",resetgame);
